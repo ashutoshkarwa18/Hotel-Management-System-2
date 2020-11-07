@@ -48,24 +48,27 @@ public class Dashboard extends JFrame implements ActionListener {
         add(l1);
 
         JLabel l2 = new JLabel("THE TAJ GROUP WELCOMES YOU");
-        l2.setForeground(Color.BLACK);
+        l2.setForeground(Color.decode("#521c1c"));
         l2.setBounds(150,500,1200,70);
-        l2.setFont(new Font("tahoma", Font.PLAIN,60));
+        l2.setFont(new Font("sans serif", Font.TRUETYPE_FONT,60));
         l1.add(l2);
 
         setLayout(null);
         setBounds(0,0,1300,750);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
     public void actionPerformed(ActionEvent ae){
         if (ae.getActionCommand().equals("RECEPTION")){
-
+            new Reception().setVisible(true);
         }else if(ae.getActionCommand().equals("ADD EMPLOYEE")){
             new AddEmployee().setVisible(true);
-
+        }else if(ae.getActionCommand().equals("ADD ROOMS")){
+            new AddRooms().setVisible(true);
+        }else if(ae.getActionCommand().equals("ADD DRIVERS")){
+            new AddDriver().setVisible(true);
         }
     }
     public static void main(String[] args) {
