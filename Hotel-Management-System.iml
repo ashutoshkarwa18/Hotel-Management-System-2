@@ -18,5 +18,7 @@
         <jarDirectory url="file:///etc/mysql" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="mysql-connector-java-8.0.211" level="project" />
+    <orderEntry type="library" name="rs2xml" level="project" />
   </component>
 </module>
