@@ -17,7 +17,7 @@ public class InitialFrame extends JFrame implements ActionListener{
         add(l1);
 
         JLabel l2 = new JLabel("Hotel Management System");
-        l2.setBounds(255,10,1000,90);
+        l2.setBounds(250,5,1000,90);
         l2.setForeground(Color.WHITE);
         l2.setFont(new Font("serif",Font.TRUETYPE_FONT,70));
         l1.add(l2);                                                        //to make it visible above l1
