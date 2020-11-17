@@ -80,21 +80,21 @@ public class UpdateCheck extends JFrame implements ActionListener {
         b1 = new JButton("Check");
         b1.setBackground(Color.BLACK);
         b1.setForeground(Color.white);
-        b1.setBounds(30,340,100,30);
+        b1.setBounds(120,320,130,30);
         b1.addActionListener(this);
         add(b1);
 
         b2 = new JButton("Update");
         b2.setBackground(Color.BLACK);
         b2.setForeground(Color.white);
-        b2.setBounds(150,340,100,30);
+        b2.setBounds(30,370,130,30);
         b2.addActionListener(this);
         add(b2);
 
         b3 = new JButton("Back");
         b3.setBackground(Color.BLACK);
         b3.setForeground(Color.white);
-        b3.setBounds(270,340,100,30);
+        b3.setBounds(200,370,130,30);
         b3.addActionListener(this);
         add(b3);
 
@@ -133,7 +133,7 @@ public class UpdateCheck extends JFrame implements ActionListener {
                     deposit = rs.getString("deposit");
 
                 }
-                ResultSet rs2 = c.s.executeQuery("SELECT * FROM room WHERE room = '"+ price + "'");
+                ResultSet rs2 = c.s.executeQuery("SELECT * FROM room WHERE room = '"+room+"'");
                 while(rs2.next()){
                     price = rs2.getString("price");
                     amountPaid = Integer.parseInt(price) - Integer.parseInt(deposit);
@@ -145,6 +145,21 @@ public class UpdateCheck extends JFrame implements ActionListener {
             }
 
         }else if(ae.getSource()== b2){
+            try {
+                conn c = new conn();
+                String room = t1.getText();
+                String name = t2.getText();
+                String status = t3.getText();
+                String amount = t4.getText();
+                String pending = t5.getText();
+                String number = c1.getSelectedItem();
+
+                String str2 = "update customer set room='" + room + "', name='" + name + "', status='" + status + "', deposit='" + amount + "' where number='" + number + "'";
+                c.s.executeUpdate(str2);
+                JOptionPane.showMessageDialog(null, "Details Updated Successfully");
+                new Reception().setVisible(true);
+                this.setVisible(false);
+            }catch (Exception e){}
 
         }else if (ae.getSource() == b3){
             new Reception().setVisible(true);

@@ -107,36 +107,57 @@ public class Reception extends JFrame implements ActionListener {
 
     }
 
-    public static void main(String[] args) {
-        new Reception().setVisible(true);
-    }
-
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b1) {
+            new AddCustomer().setVisible(true);
+            this.setVisible(false);
 
         } else if (e.getSource() == b2) {
             new Room().setVisible(true);
             this.setVisible(false);
+
         }else if (e.getSource() == b3) {
+            new Department().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b4) {
+            new EmployeeInfo().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b5) {
+            new CustomerInfo().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b6) {
+            new ManagerInfo().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b7) {
+            new Checkout().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b8) {
+            new UpdateCheck().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b9) {
+            new UpdateRoom().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b10) {
+            new Pickup().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b11) {
+            new SearchRoom().setVisible(true);
+            this.setVisible(false);
 
         }else if (e.getSource() == b12) {
             setVisible(false);
         }
+    }
+
+    public static void main(String[] args) {
+        new Reception().setVisible(true);
     }
 }

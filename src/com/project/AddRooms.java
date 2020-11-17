@@ -30,7 +30,7 @@ public class AddRooms extends JFrame implements ActionListener {
         available.setBounds(50, 130,120, 30);
         add(available);
 
-        c1 = new JComboBox(new String[] {" Available", " Occupied"});
+        c1 = new JComboBox(new String[] {"Available","Occupied"});
         c1.setBounds(190,130,120,30);
         c1.setBackground(Color.white);
         add(c1);
@@ -40,7 +40,7 @@ public class AddRooms extends JFrame implements ActionListener {
         status.setBounds(50, 180,120, 30);
         add(status);
 
-        c2 = new JComboBox(new String[] {" Clean", " Dirty"});
+        c2 = new JComboBox(new String[] {"Clean","Dirty"});
         c2.setBounds(190,180,120,30);
         c2.setBackground(Color.white);
         add(c2);
@@ -59,7 +59,7 @@ public class AddRooms extends JFrame implements ActionListener {
         type.setBounds(50, 280,120, 30);
         add(type);
 
-        c3 = new JComboBox(new String[] {" Single Bed", " Double Bed"});
+        c3 = new JComboBox(new String[] {"Single Bed","Double Bed"});
         c3.setBounds(190,280,120,30);
         c3.setBackground(Color.white);
         add(c3);
